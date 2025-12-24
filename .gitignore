@@ -1,0 +1,13 @@
+# Exports / builds
+build/
+dist/
+exports/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
