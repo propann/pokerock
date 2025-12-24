@@ -4,7 +4,7 @@
   "_index": 0,
   "symbol": "actor_18",
   "prefabId": "",
-  "name": "",
+  "name": "Maitre Galet",
   "x": 7,
   "y": 25,
   "frame": 0,
@@ -20,32 +20,365 @@
   "prefabScriptOverrides": {},
   "script": [
     {
-      "id": "7ba26d3c-c1ca-46c8-a4ae-ed0a431b1d03",
-      "command": "EVENT_TEXT",
+      "id": "b03dbf4f-21f8-4ed6-9b41-19d0fc216cb0",
+      "command": "EVENT_IF",
       "args": {
-        "text": "Try to get the ice\nblock to the mark."
-      }
-    },
-    {
-      "id": "1cf687c1-e1fe-4e89-a7ef-9ddc6412ef4f",
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": "If you get stuck,\nI'll reset it!"
-      }
-    },
-    {
-      "id": "a50d16e9-2660-4fde-94c2-825e6fe799ee",
-      "command": "EVENT_ACTOR_SET_POSITION",
-      "args": {
-        "actorId": "27de6d44-f7c0-48df-a952-2c87471bbfd4",
-        "x": {
-          "type": "number",
-          "value": 24
+        "variable": "5",
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "5"
+          },
+          "valueB": {
+            "type": "false"
+          }
         },
-        "y": {
-          "type": "number",
-          "value": 18
-        }
+        "__collapse": false,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "id": "4e6b3ada-668b-4f5f-92cd-2788e2712a25",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": "Maitre Galet :\nContrat mineral a signer.\nNotaire des cailloux present."
+            }
+          },
+          {
+            "id": "f4b134f2-66c4-4f01-9c6a-1dab33b7fe6b",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "6",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            }
+          },
+          {
+            "id": "1a2732ec-8aef-42d5-8c9f-55132ac7276e",
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "6",
+              "cancelOnB": true,
+              "options": [
+                "GALET",
+                "QUARTZ",
+                "BASALT"
+              ]
+            }
+          },
+          {
+            "id": "2d26a5a9-fce5-4851-8a46-f88e76b37797",
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "6",
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "6"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapse": false,
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "0c274b16-2f7c-4b03-86d5-c2117248f461",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "Dossier ajourne.\nReviens signer quand pret."
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "id": "ae231680-6f8a-4d8b-9832-b3fe16a83b25",
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "6",
+                    "choices": 3,
+                    "__collapseCase0": false,
+                    "value0": 1,
+                    "__collapseCase1": false,
+                    "value1": 2,
+                    "__collapseCase2": false,
+                    "value2": 3,
+                    "__collapseCase3": false,
+                    "value3": 0,
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "id": "8c6402ab-df35-4f9c-b2b3-55f54c3f5099",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "0",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      },
+                      {
+                        "id": "5e327e8f-d097-468a-9b36-3eeef4967121",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "1",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      },
+                      {
+                        "id": "a3bc56ad-31f2-4da7-a053-4dfb7be3d81d",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "2",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      },
+                      {
+                        "id": "da4f8a92-ff2c-4de4-8987-43d4e8cf8a62",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "4",
+                          "value": {
+                            "type": "number",
+                            "value": 12
+                          }
+                        }
+                      },
+                      {
+                        "id": "8f90fd76-4fc0-47d9-8c0e-411c2fb54d10",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "3",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        }
+                      },
+                      {
+                        "id": "13896a3d-33db-4a6e-94ef-3fd1dfbbd889",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": "GALET : masse notariale.\nDurete sobre, prometteuse."
+                        }
+                      }
+                    ],
+                    "true1": [
+                      {
+                        "id": "7be476b3-60f0-4fab-bfe9-b3037646f7d6",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "0",
+                          "value": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        }
+                      },
+                      {
+                        "id": "dbd948c7-c9a9-4bb3-aa54-50574730d355",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "1",
+                          "value": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        }
+                      },
+                      {
+                        "id": "ceec4b68-d3ba-4c52-8a3c-e9d52a7d3b5e",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "2",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      },
+                      {
+                        "id": "1c753d9b-6b95-452e-804d-6187e0c9208f",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "4",
+                          "value": {
+                            "type": "number",
+                            "value": 10
+                          }
+                        }
+                      },
+                      {
+                        "id": "9b778f2f-8b0c-456b-a3b0-57ced6d02049",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "3",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        }
+                      },
+                      {
+                        "id": "4a942236-88d5-4486-ae2e-4fb59f32a3c3",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": "QUARTZ : clause brillante.\nReflet pour epater la prefecture."
+                        }
+                      }
+                    ],
+                    "true2": [
+                      {
+                        "id": "0648f922-0379-4ce3-a3d2-8e774c1bff23",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "0",
+                          "value": {
+                            "type": "number",
+                            "value": 3
+                          }
+                        }
+                      },
+                      {
+                        "id": "3d5a93fb-4543-4a8c-bba3-1d6f0692f491",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "1",
+                          "value": {
+                            "type": "number",
+                            "value": 3
+                          }
+                        }
+                      },
+                      {
+                        "id": "2beeb485-65be-4a98-a229-e3d9c213f3a4",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "2",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        }
+                      },
+                      {
+                        "id": "f9542d09-e45c-4f92-9cf8-d70fc7f72045",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "4",
+                          "value": {
+                            "type": "number",
+                            "value": 14
+                          }
+                        }
+                      },
+                      {
+                        "id": "3dbf0e5b-dd4d-404c-872d-4193d96f5fdc",
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "3",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        }
+                      },
+                      {
+                        "id": "6b800afd-2abe-4b6c-9f0c-58fcdfda7f2a",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": "BASALT : dossier massif.\nSigne lourd, conscience legere."
+                        }
+                      }
+                    ],
+                    "true3": [],
+                    "false": []
+                  }
+                },
+                {
+                  "id": "8af3989b-63f9-4cbe-9d39-7f46ca3b2ffd",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "5",
+                    "value": {
+                      "type": "true"
+                    }
+                  }
+                },
+                {
+                  "id": "f83250d4-90d1-43c6-aa31-8a7b157e6f8a",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "7",
+                    "value": {
+                      "type": "number",
+                      "value": 10
+                    }
+                  }
+                },
+                {
+                  "id": "4e5fd37f-49d1-4386-9b63-0a52bc50853f",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "8",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                },
+                {
+                  "id": "d5f0b3a3-70c3-4a3c-b693-72ea4c3fae5c",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "Tu adoptes ce rocher.\nIl ne bouge pas.\nC est bon signe."
+                  }
+                },
+                {
+                  "id": "f9a727a2-35af-4a70-8a9f-36ed6ce127ed",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "Un caillou sauvage\napparait. Audience ouverte."
+                  }
+                },
+                {
+                  "id": "d0a0c3db-d12d-48a9-8d37-6c0e552e2227",
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "e2c6d228-1b3e-43ed-855b-0b1d9faf9201"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "efc0c2c5-2dc1-40fa-ab9f-ae98fc21703a",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": "Dossiers en cours.\nTon caillou reste stable,\nc est rassurant."
+            }
+          }
+        ]
       }
     }
   ],

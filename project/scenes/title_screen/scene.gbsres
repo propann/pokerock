@@ -69,19 +69,29 @@
             "children": {
               "true": [
                 {
+                  "id": "c05b7e8e-58ac-44ad-89ba-572552df3ffa",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "9",
+                    "value": {
+                      "type": "false"
+                    }
+                  }
+                },
+                {
                   "id": "a5dddc76-e5fe-424a-9b2b-1ad1834acefb",
                   "command": "EVENT_SWITCH_SCENE",
                   "args": {
-                    "sceneId": "94c18861-b352-4f49-a64d-52f2e3415077",
+                    "sceneId": "3509d273-bf7e-4946-89ce-a489df5a449d",
                     "x": {
                       "type": "number",
-                      "value": 27
+                      "value": 21
                     },
                     "y": {
                       "type": "number",
-                      "value": 26
+                      "value": 29
                     },
-                    "direction": "left",
+                    "direction": "up",
                     "fadeSpeed": "4"
                   }
                 }

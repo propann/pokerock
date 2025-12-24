@@ -1,0 +1,229 @@
+{
+  "_resourceType": "script",
+  "id": "e2c6d228-1b3e-43ed-855b-0b1d9faf9201",
+  "name": "Rock Battle Loop",
+  "symbol": "script_rock_battle",
+  "description": "Simple menu battle loop",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "id": "a4d88f6d-f3b3-4cfa-998a-651b9b66cd1a",
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "8",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      }
+    },
+    {
+      "id": "1a2732ec-8aef-42d5-8c9f-55132ac7276e",
+      "command": "EVENT_MENU",
+      "args": {
+        "variable": "8",
+        "cancelOnB": true,
+        "options": [
+          "GRAVIR",
+          "POLISH",
+          "PHILO",
+          "FUIR"
+        ]
+      }
+    },
+    {
+      "id": "5344d49c-55d8-489e-9d57-33334de8ae73",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "8",
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "8"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapse": false,
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "id": "ae231680-6f8a-4d8b-9832-b3fe16a83b25",
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "8",
+              "choices": 4,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseElse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "id": "c3fffa5e-f1c0-4d4d-8cdd-a9907819b39b",
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "7",
+                    "operation": "sub",
+                    "other": "value",
+                    "vectorY": "7",
+                    "value": 3,
+                    "minValue": 0,
+                    "maxValue": 255
+                  }
+                },
+                {
+                  "id": "28f752a9-7a45-4653-8335-23c21729c9fb",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "GRAVIR : le caillou\nadverse perd des grains."
+                  }
+                }
+              ],
+              "true1": [
+                {
+                  "id": "0462337b-e4af-4f86-ac6c-d2ed1c4bdaed",
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "4",
+                    "operation": "add",
+                    "other": "value",
+                    "vectorY": "4",
+                    "value": 2,
+                    "minValue": 0,
+                    "maxValue": 255
+                  }
+                },
+                {
+                  "id": "37d603e8-46a3-46d2-acbe-1d1f52d0e9ec",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "POLISH : brillance notariale."
+                  }
+                }
+              ],
+              "true2": [
+                {
+                  "id": "cfc53487-8f31-4a0c-b0e1-6fe73886958d",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "PHILO : vous contemplez\nla poussiere administrative."
+                  }
+                }
+              ],
+              "true3": [
+                {
+                  "id": "1a01b00b-2a96-4bb5-9e69-9d4fbc6f188e",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "FUIR : le dossier combat\nest classe sans suite."
+                  }
+                }
+              ],
+              "false": []
+            }
+          },
+          {
+            "id": "9cc729b5-24d1-49a7-8b3f-34cbdbe427ed",
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "8",
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "8"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 4
+                }
+              },
+              "__collapse": true,
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [],
+              "false": [
+                {
+                  "id": "954b4ca1-3fcb-4d10-b61d-1a598b4651f2",
+                  "command": "EVENT_IF",
+                  "args": {
+                    "variable": "7",
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "7"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapse": false,
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "id": "8ce3f98a-4c19-4f52-a6c0-69e46cdc1a6c",
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "3"
+                        }
+                      },
+                      {
+                        "id": "71c0a957-51c7-4ee7-853e-6c6648c2b9a9",
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "3"
+                        }
+                      },
+                      {
+                        "id": "09e2b8b9-8305-4606-9401-3f58bb7b7a1d",
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "3"
+                        }
+                      },
+                      {
+                        "id": "c5d5ea40-f459-4569-8547-901b5d29a96b",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": "Victoire mineral : +3 XP\nnotes dans le registre."
+                        }
+                      }
+                    ],
+                    "false": [
+                      {
+                        "id": "d0a0c3db-d12d-48a9-8d37-6c0e552e2227",
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "e2c6d228-1b3e-43ed-855b-0b1d9faf9201"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

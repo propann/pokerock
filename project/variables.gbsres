@@ -1,70 +1,17 @@
 {
   "_resourceType": "variables",
   "variables": [
-    {
-      "id": "0",
-      "name": "Seen Cat",
-      "symbol": ""
-    },
-    {
-      "id": "1",
-      "name": "Seen duck",
-      "symbol": ""
-    },
-    {
-      "id": "2",
-      "name": "Used Radio",
-      "symbol": ""
-    },
-    {
-      "id": "3",
-      "name": "Spoke To Space Dog",
-      "symbol": ""
-    },
-    {
-      "id": "4",
-      "name": "Quest1",
-      "symbol": ""
-    },
-    {
-      "id": "5",
-      "name": "Quest2",
-      "symbol": ""
-    },
-    {
-      "id": "6",
-      "name": "Quest3",
-      "symbol": ""
-    },
-    {
-      "id": "7",
-      "name": "Quest4",
-      "symbol": ""
-    },
-    {
-      "id": "8",
-      "name": "Quest5",
-      "symbol": ""
-    },
-    {
-      "id": "9",
-      "name": "Quest6",
-      "symbol": ""
-    },
-    {
-      "id": "10",
-      "name": "NewGame",
-      "symbol": ""
-    },
-    {
-      "id": "11",
-      "name": "SaveGame",
-      "symbol": ""
-    },
-    {
-      "id": "12",
-      "name": "PushedIceBlock",
-      "symbol": ""
-    }
+    { "id": "0", "name": "rock_id", "symbol": "" },
+    { "id": "1", "name": "rock_type", "symbol": "" },
+    { "id": "2", "name": "rock_level", "symbol": "" },
+    { "id": "3", "name": "rock_xp", "symbol": "" },
+    { "id": "4", "name": "rock_hp", "symbol": "" },
+    { "id": "5", "name": "starter_chosen", "symbol": "" },
+    { "id": "6", "name": "starter_pick", "symbol": "" },
+    { "id": "7", "name": "enemy_hp", "symbol": "" },
+    { "id": "8", "name": "battle_pick", "symbol": "" },
+    { "id": "9", "name": "init_flag", "symbol": "" },
+    { "id": "10", "name": "menu_choice", "symbol": "" },
+    { "id": "11", "name": "save_game_flag", "symbol": "" }
   ]
 }

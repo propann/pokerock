@@ -1,9 +1,13 @@
-# Exports / builds
+# GB Studio exports/build
 build/
 dist/
 exports/
+*.gb
+*.gbc
+*.pocket
+*.html
 
-# OS / éditeurs
+# OS / editors
 .DS_Store
 Thumbs.db
 .vscode/
